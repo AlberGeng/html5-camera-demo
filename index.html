@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html5调用摄像头并拍照</title>
+<title>html5调用摄像头</title>
 <meta content="" name="Keywords" />
 <meta content="" name="Description"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -15,7 +15,7 @@
 <style type="text/css">
 *{  padding:0; margin:0; }
 html, body{ padding:0;height: 100%; }
-.pic{position: fixed;z-index: 999;width: 100%;height: 100%;opacity: 0.5;}
+.pic{position: fixed;z-index: 999;width: 100%;height: 100%;opacity: 0.3;}
 </style>
 
 <img class="pic" src="1.jpg" />
@@ -63,7 +63,7 @@ html, body{ padding:0;height: 100%; }
 		 
 			// Call the getUserMedia method with our callback functions
 			if (navigator.getUserMedia) {
-				navigator.getUserMedia({video: {facingMode: { exact: 'environment' }}}, successCallback, errorCallback);
+				navigator.getUserMedia({video: true}, successCallback, errorCallback);
 			} else {
 				alert('浏览器不支持getUserMedia.');
 				// Display a friendly "sorry" message to the user
