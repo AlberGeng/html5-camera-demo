@@ -61,7 +61,7 @@ html, body{ padding:0;height: 100%; }
 		 
 			// Call the getUserMedia method with our callback functions
 			if (navigator.getUserMedia) {
-				navigator.getUserMedia({video: true}, successCallback, errorCallback);
+				navigator.getUserMedia({video: {facingMode: { exact: 'environment' }}}, successCallback, errorCallback);
 			} else {
 				alert('浏览器不支持getUserMedia.');
 				// Display a friendly "sorry" message to the user
